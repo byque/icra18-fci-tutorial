@@ -1,0 +1,23 @@
+- type: set_collision_behavior
+  params:
+    torques: [20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0]
+    forces: [20.0, 20.0, 30.0, 25.0, 25.0, 25.0]
+
+# Open gripper
+- type: gripper_move
+  params:
+    width: 0.08
+
+# Move to initial joint configuration
+- type: moveit_joint
+  params:
+    position: [-0.000112,-0.784825,-0.000260240,-2.3567,-0.000225292,1.57111,0.784684]
+    acc: 0.25
+    vel: 0.25
+
+# Move joint pose 1
+- type: moveit_joint
+  params:
+    position: [0.1,-0.784714,-0.000123644,-2.3558,-0.000510225,1.57098,0.785892]
+    acc: 0.1
+    vel: 0.1
