@@ -1,7 +1,7 @@
-# Move down vertically
+# Move up vertically
 - type: moveit_cart
   params:
-    pos: [0.762387, -0.0765258, 0.257823]
+    pos: [0.762387, -0.0765258, 0.357823]
     rot: [0, -0.9239, 0.3827, 0]
     acc: 0.1
     vel: 0.1

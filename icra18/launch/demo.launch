@@ -10,7 +10,9 @@
   </include>
   <rosparam command="load" file="$(find icra18)/config/controllers.yaml" />
   <node name="demo" pkg="icra18" type="demo.py" output="screen" required="true">
-    <rosparam param="demos">[init, pick_path, pre_grasp, grasp, drop_path, drop, start_pose]</rosparam>
+    <rosparam param="demos">[init, start_pose]</rosparam>
+    <!-- <rosparam param="demos">[init, start_pose, pick_path, pre_grasp, grasp, post_grasp, drop_path, drop]</rosparam> -->
+    <!-- <rosparam param="demos">[init, start_pose, pick_path, pre_grasp]</rosparam> -->
     <rosparam param="controllers">[plug_in_controller, position_joint_trajectory_controller]</rosparam>
   </node>
 </launch>

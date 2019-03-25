@@ -1,5 +1,5 @@
 - type: gripper_grasp
   params:
-    width: 0.08
+    width: 0.07
     speed: 0.1
     force: 1
