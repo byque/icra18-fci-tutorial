@@ -1,0 +1,4 @@
+# Open gripper
+- type: gripper_move
+  params:
+    width: 0.08
