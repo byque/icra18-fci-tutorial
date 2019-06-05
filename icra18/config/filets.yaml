@@ -1,0 +1,53 @@
+- type: moveit_joint
+  params:
+    position: [-0.043485, 0.116092, 0.035079, -1.44606, -0.0237104, 1.56598, 0.874613]
+    acc: 0.1
+    vel: 0.1
+
+# Rotate gripper because 7th join is 0 with gripper at 45 degrees
+- type: moveit_cart
+  params:
+    pos: [0.590539, -0.0121, 0.621782]
+    rot: [0, -1, 0, 0]
+    acc: 0.1
+    vel: 0.1
+
+# Move down vertically
+- type: moveit_cart
+  params:
+    pos: [0.590539, -0.0121, 0.54]
+    rot: [0, -1, 0, 0]
+    acc: 0.1
+    vel: 0.1
+
+- type: gripper_grasp
+  params:
+    width: 0.06
+    speed: 0.05
+    force: 1
+
+# Move up vertically
+- type: moveit_cart
+  params:
+    pos: [0.590539, -0.0121, 0.621782]
+    rot: [0, -1, 0, 0]
+    acc: 0.1
+    vel: 0.1
+
+- type: moveit_joint
+  params:
+    position: [-0.043485,0.116092,0.035079,-1.44606,-0.0237104,1.56598,0.874613]
+    acc: 0.1
+    vel: 0.1
+
+- type: moveit_joint
+  params:
+    position: [2.5355,-0.857479,0.342749,-2.24684,0.256905,1.47553,0.405076]
+    acc: 0.1
+    vel: 0.1
+
+- type: moveit_joint
+  params:
+    position: [2.53366,-0.878272,0.523398,-2.64735,0.416613,1.82221,0.448172]
+    acc: 0.1
+    vel: 0.1

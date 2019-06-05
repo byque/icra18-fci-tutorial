@@ -1,0 +1,39 @@
+# Pick path
+- type: moveit_joint
+  params:
+    position: [0.127497,-0.488217,0.304386,-2.56201,-2.44358,2.54745,0.32904]
+    acc: 0.1
+    vel: 0.1
+
+# Move inside horizontally
+- type: moveit_joint
+  params:
+    position: [0.0865557,-0.259205,0.298215,-2.37666,-2.50597,2.48481,0.328645]
+    acc: 0.1
+    vel: 0.1
+
+- type: gripper_grasp
+  params:
+    width: 0.038
+    speed: 0.05
+    force: 1
+
+# Move up vertically
+- type: moveit_joint
+  params:
+    position: [0.052033,-0.360908,0.273032,-2.24099,-2.37257,2.69293,0.14716]
+    acc: 0.1
+    vel: 0.1
+
+# Drop path
+- type: moveit_joint
+  params:
+    position: [2.72292,-0.610074,0.177729,-1.66981,0.141906,1.08599,0.620167]
+    acc: 0.1
+    vel: 0.1
+
+- type: moveit_joint
+  params:
+    position: [2.38965,-1.0592,0.61873,-2.38399,0.559612,1.43762,0.481687]
+    acc: 0.1
+    vel: 0.1
