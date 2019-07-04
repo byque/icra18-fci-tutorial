@@ -12,7 +12,6 @@ import rospkg
 import rosparam
 import os.path
 import sys
-import copy
 
 
 class Context:
@@ -71,11 +70,10 @@ def moveit_joint(ctx, position, acc=0.1, vel=0.1):
     ctx.commander.stop()
 
 
-def moveit_cart(ctx, pos, rot, acc=0.01, vel=0.01):
+def moveit_cart(ctx, pos, rot, acc=0.1, vel=0.1):
     ctx.load_controllers(['position_joint_trajectory_controller'])
 
     print('Moving to Cartesian pose: pos {}, rot {}'.format(pos, rot))
-    waypoints = []
     pose_goal = geometry_msgs.msg.Pose()
     pose_goal.orientation.w = rot[0]
     pose_goal.orientation.x = rot[1]
@@ -88,10 +86,7 @@ def moveit_cart(ctx, pos, rot, acc=0.01, vel=0.01):
     ctx.commander.set_max_velocity_scaling_factor(vel)
     ctx.commander.set_end_effector_link('panda_link8')
     ctx.commander.set_pose_target(pose_goal)
-    waypoints.append(copy.deepcopy(pose_goal))
-    (plan, fraction) = ctx.commander.compute_cartesian_path(waypoints,
-                                                            0.01, 0.0)
-    ctx.commander.execute(plan, wait=True)
+    ctx.commander.go(wait=True)
     ctx.commander.stop()
     ctx.commander.clear_pose_targets()
 
