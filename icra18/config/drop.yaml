@@ -2,3 +2,9 @@
 - type: gripper_move
   params:
     width: 0.08
+
+- type: moveit_joint
+  params:
+    position: [2.5355,-0.857479,0.342749,-2.24684,0.256905,1.47553,0.405076]
+    acc: 0.1
+    vel: 0.1

@@ -1,7 +1,6 @@
 # Move up vertically
-- type: moveit_cart
+- type: moveit_joint
   params:
-    pos: [0.762387, -0.0765258, 0.357823]
-    rot: [0, -0.9239, 0.3827, 0]
+    position: [0.052033,-0.360908,0.273032,-2.24099,-2.37257,2.69293,0.14716]
     acc: 0.1
     vel: 0.1
